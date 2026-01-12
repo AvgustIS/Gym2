@@ -8,7 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         gymPeople.add(new Trainer(1, "Alex", "Powerlifting"));
-        gymPeople.add(new Member(101, "Maria", "Gold"));
+        gymPeople.add(new Member(101, "Maria", "Yoga"));
+        gymPeople.add(new Member(103,"Isaali","pushUp"));
 
         boolean run = true;
         while (run) {
