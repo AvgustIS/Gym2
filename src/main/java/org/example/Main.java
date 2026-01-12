@@ -1,33 +1,69 @@
 package org.example;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
+    private static ArrayList<Person> gymPeople = new ArrayList<>();
+    private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-        System.out.println(" GYM MANAGEMENT SYSTEM ");
-        System.out.println();
+        gymPeople.add(new Trainer(1, "Alex", "Powerlifting"));
+        gymPeople.add(new Member(101, "Maria", "Gold"));
 
-        Member m1 = new Member(101, "Alice", 65, "Basic");
-        Member m2 = new Member(112, "Isaali",17,"Basic");
-        Trainer t1 = new Trainer(501, "Coach Bob", "Crossfit", 10);
-        WorkoutSession s1 = new WorkoutSession(901, "Alice", "Cardio", 45);
-        WorkoutSession s2 = new WorkoutSession();
+        boolean run = true;
+        while (run) {
+            System.out.println("\n--- GYM MANAGEMENT SYSTEM ---");
+            System.out.println("1. Add Trainer");
+            System.out.println("2. Add Member");
+            System.out.println("3. View All People");
+            System.out.println("0. Exit");
+            System.out.print("Choice: ");
 
-        System.out.println(" INFORMATION  ");
-        System.out.println(m1);
-        System.out.println(m2);
-        System.out.println(t1);
-        System.out.println(s1);
-        System.out.println(s2);
-        System.out.println();
+            int choice = scanner.nextInt();
+            scanner.nextLine();
 
-        System.out.println(" INFORMATION (about) ");
-        System.out.println(m1.getName() + " is senior: " + m1.isSenior());
-        m1.applyUpgrade("Premium");
-        System.out.println("Updated m1: " + m1);
+            if (choice == 1) {
+                addTrainer();
+            } else if (choice == 2) {
+                addMember();
+            } else if (choice == 3) {
+                viewPeople();
+            } else if (choice == 0) {
+                run = false;
+            }
+        }
+    }
 
-        System.out.println(t1.getName() + " is expert: " + t1.isExpert());
-        System.out.println("Bonus for " + t1.getName() + ": $" + t1.getPerformanceBonus());
+    private static void addTrainer() {
+        System.out.print("Enter ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Specialization: ");
+        String spec = scanner.nextLine();
 
-        System.out.println("Session 1 calories: " + s1.getCaloriesBurned());
-        System.out.println("Session 2 intensity: " + s2.getIntensityLevel());
+        gymPeople.add(new Trainer(id, name, spec));
+        System.out.println("Trainer added!");
+    }
+
+    private static void addMember() {
+        System.out.print("Enter ID: ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        System.out.print("Enter Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Membership Type: ");
+        String type = scanner.nextLine();
+
+        gymPeople.add(new Member(id, name, type));
+        System.out.println("Member added!");
+    }
+
+    private static void viewPeople() {
+        System.out.println("\n--- LIST OF ALL PEOPLE ---");
+        for (Person p : gymPeople) {
+            p.displayInfo();
+        }
     }
 }
