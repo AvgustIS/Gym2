@@ -4,7 +4,15 @@ public class Member extends Person {
 
     public Member(int id, String name, String membershipType) {
         super(id, name);
-        this.membershipType = membershipType;
+        setmembershipType(membershipType);
+    }
+
+    public void setmembershipType(String name) {
+        if (name != null && !name.isEmpty()) {
+            this.membershipType = name;
+        } else {
+            this.membershipType = "Unknown";
+        }
     }
 
     @Override

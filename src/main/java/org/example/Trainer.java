@@ -4,7 +4,15 @@ public class Trainer extends Person {
 
     public Trainer(int id, String name, String specialization) {
         super(id, name);
-        this.specialization = specialization;
+        setSpecialization(specialization);
+    }
+
+    public void setSpecialization(String name) {
+        if (name != null && !name.isEmpty()) {
+            this.specialization = name;
+        } else {
+            this.specialization = "Unknown";
+        }
     }
 
     @Override

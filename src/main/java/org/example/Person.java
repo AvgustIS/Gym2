@@ -12,7 +12,7 @@ public class Person {
         if (id > 0) {
             this.id = id;
         } else {
-            this.id = 100;
+            this.id = 000;
         }
     }
 
