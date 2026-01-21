@@ -64,7 +64,7 @@ public class Main {
     private static void viewPeople() {
         System.out.println("\n--- LIST OF ALL PEOPLE ---");
         for (Person p : gymPeople) {
-            p.displayInfo();
+            p.aboniment();
         }
     }
 }

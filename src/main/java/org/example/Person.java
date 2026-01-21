@@ -1,7 +1,9 @@
 package org.example;
-public class Person {
+public abstract class Person {
     protected int id;
     protected String name;
+
+    abstract void aboniment();
 
     public Person(int id, String name) {
         setId(id);

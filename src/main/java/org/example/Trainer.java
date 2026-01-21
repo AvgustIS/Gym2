@@ -2,6 +2,8 @@ package org.example;
 public class Trainer extends Person {
     private String specialization;
 
+
+
     public Trainer(int id, String name, String specialization) {
         super(id, name);
         setSpecialization(specialization);
@@ -20,9 +22,9 @@ public class Trainer extends Person {
     }
 
     @Override
-    public void displayInfo() {
+    void aboniment(){
         System.out.print("[TRAINER] ");
         super.displayInfo();
-        System.out.println("Specialization: " + specialization);
+        System.out.println("Trainer: " + specialization);
     }
 }

@@ -20,7 +20,7 @@ public class Member extends Person {
     }
 
     @Override
-    public void displayInfo() {
+     void aboniment() {
         System.out.print("[MEMBER] ");
         super.displayInfo();
         System.out.println("Membership: " + membershipType);
