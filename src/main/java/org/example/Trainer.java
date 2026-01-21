@@ -2,6 +2,8 @@ package org.example;
 public class Trainer extends Person {
     private String specialization;
 
+
+
     public Trainer(int id, String name, String specialization) {
         super(id, name);
         setSpecialization(specialization);
@@ -11,7 +13,7 @@ public class Trainer extends Person {
         if (name != null && !name.isEmpty()) {
             this.specialization = name;
         } else {
-            this.specialization = "Unknown";
+            throw new IllegalArgumentException("Specialization required.");
         }
     }
 
@@ -20,9 +22,14 @@ public class Trainer extends Person {
     }
 
     @Override
-    public void displayInfo() {
+    public void aboniment(){
         System.out.print("[TRAINER] ");
         super.displayInfo();
-        System.out.println("Specialization: " + specialization);
+        System.out.println("Trainer: " + specialization);
+    }
+
+    @Override
+    public void performAction() {
+        System.out.println("Trainer " + name + " is coaching a session.");
     }
 }

@@ -1,7 +1,9 @@
 package org.example;
-public class Person {
+public abstract class Person implements GymAction {
     protected int id;
     protected String name;
+
+    public abstract void aboniment();
 
     public Person(int id, String name) {
         setId(id);
@@ -12,7 +14,7 @@ public class Person {
         if (id > 0) {
             this.id = id;
         } else {
-            this.id = 000;
+            throw new IllegalArgumentException("ID must be positive.");
         }
     }
 
@@ -20,12 +22,17 @@ public class Person {
         if (name != null && !name.isEmpty()) {
             this.name = name;
         } else {
-            this.name = "Unknown";
+            throw new IllegalArgumentException("Name cannot be empty.");
         }
     }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void performAction() {
+        System.out.println(name + " is performing a gym activity.");
     }
 
     public void displayInfo() {

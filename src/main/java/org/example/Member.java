@@ -11,7 +11,7 @@ public class Member extends Person {
         if (name != null && !name.isEmpty()) {
             this.membershipType = name;
         } else {
-            this.membershipType = "Unknown";
+            throw new IllegalArgumentException("Membership required.");
         }
     }
 
@@ -20,7 +20,7 @@ public class Member extends Person {
     }
 
     @Override
-    public void displayInfo() {
+     public void aboniment() {
         System.out.print("[MEMBER] ");
         super.displayInfo();
         System.out.println("Membership: " + membershipType);

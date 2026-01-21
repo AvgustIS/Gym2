@@ -12,7 +12,7 @@ public class WorkoutSession {
         if (Minutes > 0) {
             this.Minutes = Minutes;
         } else {
-            this.Minutes = 30;
+            throw new IllegalArgumentException("workout isn't done.");
         }
     }
 
