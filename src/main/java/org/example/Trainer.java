@@ -15,6 +15,10 @@ public class Trainer extends Person {
         }
     }
 
+    public String getSpecialization() {
+        return specialization;
+    }
+
     @Override
     public void displayInfo() {
         System.out.print("[TRAINER] ");

@@ -15,6 +15,10 @@ public class Member extends Person {
         }
     }
 
+    public String getMembershipType() {
+        return membershipType;
+    }
+
     @Override
     public void displayInfo() {
         System.out.print("[MEMBER] ");
