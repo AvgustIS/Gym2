@@ -8,8 +8,8 @@ import org.example.Trainer;
 
 public class MenuGym implements Menu { // Имя класса с большой буквы
 
-    private static ArrayList<Person> gymPeople = new ArrayList<>(); // Инициализация
-    private static Scanner scanner = new Scanner(System.in); // Инициализация
+    private static ArrayList<Person> gymPeople = new ArrayList<>();
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args){
         gymPeople.add(new Trainer(123,"Isaali","Run"));
@@ -41,7 +41,7 @@ public class MenuGym implements Menu { // Имя класса с большой 
                 }
             } catch (Exception e) {
                 System.out.println("Invalid input. Please enter a number.");
-                scanner.nextLine(); // Очистка буфера
+                scanner.nextLine();
             }
         }
     }
@@ -62,7 +62,7 @@ public class MenuGym implements Menu { // Имя класса с большой 
             System.out.println("Trainer added successfully!");
 
         } catch (IllegalArgumentException e) {
-            System.out.println("ERROR: " + e.getMessage()); // Вывод сообщения из сеттера
+            System.out.println("ERROR: " + e.getMessage());
         }
     }
 

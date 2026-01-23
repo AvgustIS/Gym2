@@ -1,4 +1,4 @@
-package menu; // Исправлен пакет для соответствия Main
+package menu;
 
 public interface Menu {
     void displayMenu();
