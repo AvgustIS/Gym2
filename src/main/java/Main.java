@@ -2,7 +2,7 @@ import menu.Menu;
 import menu.MenuGym;
 
 public class Main {
-    public static void main(String[] args) {
+     static void main(String[] args) {
         Menu menu = new MenuGym();
         menu.displayMenu();
     }
