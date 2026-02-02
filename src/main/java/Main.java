@@ -1,9 +1,8 @@
 import menu.Menu;
-import menu.MenuGym;
+import menu.GymMenu;
 
 public class Main {
-     static void main(String[] args) {
-        Menu menu = new MenuGym();
-        menu.displayMenu();
+    public static void main(String[] args) {
+        new GymMenu().run();
     }
 }
