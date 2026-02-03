@@ -182,7 +182,7 @@ public class GymMenu implements Menu {
         }
     }
 
-    // --- Trainers methods ---
+
     private void addTrainer() {
         try {
             System.out.print("Name: ");

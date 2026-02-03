@@ -111,7 +111,7 @@ public class TrainerDAO {
             System.out.println("Delete trainer failed: " + e.getMessage());
             return false;
         } finally {
-            try { conn.close(); } catch (SQLException ignored) {}
+            DatabaseConnection.close(conn);
         }
     }
 
@@ -138,7 +138,7 @@ public class TrainerDAO {
         } catch (SQLException e) {
             System.out.println("Search trainer failed: " + e.getMessage());
         } finally {
-            try { conn.close(); } catch (SQLException ignored) {}
+            DatabaseConnection.close(conn);
         }
         return list;
     }
