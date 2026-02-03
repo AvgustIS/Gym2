@@ -68,7 +68,7 @@ public class GymMenu implements Menu {
         scanner.close();
     }
 
-    // --- Members methods (как было ранее) ---
+
     private void addMember() {
         try {
             System.out.print("Name: ");

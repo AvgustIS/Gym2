@@ -115,7 +115,7 @@ public class MemberDAO {
         }
     }
 
-    // Search by name (ILIKE, partial)
+
     public List<Member> searchByName(String namePart) {
         List<Member> list = new ArrayList<>();
         String sql = "SELECT * FROM member WHERE name ILIKE ? ORDER BY name";
@@ -143,7 +143,7 @@ public class MemberDAO {
         return list;
     }
 
-    // Search by fee range
+
     public List<Member> searchByFeeRange(double min, double max) {
         List<Member> list = new ArrayList<>();
         String sql = "SELECT * FROM member WHERE monthly_fee BETWEEN ? AND ? ORDER BY monthly_fee DESC";

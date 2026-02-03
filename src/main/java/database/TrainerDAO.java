@@ -115,7 +115,7 @@ public class TrainerDAO {
         }
     }
 
-    // Поиск по специализации (частичный, регистронезависимый)
+
     public List<Trainer> searchBySpecialization(String specPart) {
         List<Trainer> list = new ArrayList<>();
         String sql = "SELECT * FROM trainer WHERE specialization ILIKE ? ORDER BY name";

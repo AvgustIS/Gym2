@@ -38,7 +38,7 @@ public abstract class Person {
         this.age = age;
     }
 
-    // Абстрактные методы — заставляют детей реализовать поведение (Week 6).
+
     public abstract String getRole();
     public abstract void act();
 
